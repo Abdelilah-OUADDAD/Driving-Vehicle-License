@@ -17,10 +17,14 @@ namespace DVLDProject
             InitializeComponent();
         }
 
-        public frmScheduleWrittenTest( int AppID, string ClassName, string FullName, int CreatedByID)
+        public frmScheduleWrittenTest( int AppID, string ClassName, string FullName, int CreatedByID, int TestAppointmentID
+            , bool IsEdit , bool IsSave )
         {
             InitializeComponent();
-            
+
+            ctrlScheduleTest1.IsEdit = IsEdit;
+            ctrlScheduleTest1.IsSave = IsSave;
+            ctrlScheduleTest1.TestAppointmentID = TestAppointmentID;
             ctrlScheduleTest1.AppID = AppID;
             ctrlScheduleTest1.ClassName = ClassName;
             ctrlScheduleTest1.FullName = FullName;

@@ -34,24 +34,41 @@ namespace DVLDProject
 
         private void btnIssue_Click(object sender, EventArgs e)
         {
-            clsApplicant clsapplicant = new clsApplicant();
-            
-            clsapplicant.ApplicationID = (int)dt.Rows[0]["ApplicationID"];
-            clsapplicant.DriverID = 9;
-            clsapplicant.LicenseClass = (int)dt.Rows[0]["LicenseClassID"];
-            clsapplicant.IssueDate = DateTime.Now;
-            clsapplicant.ExpirationDate = DateTime.Now;
-            clsapplicant.IsActive = true;
-            clsapplicant.ExpirationDate = DateTime.Now;
-            clsapplicant.PaidFees = 20;
-            clsapplicant.CreatedByUserID = this.CreatedByID;
-            clsapplicant.IssueReason =1;
-            clsapplicant.Notes = textBox1.Text;
-            if (clsapplicant.SaveLicenses())
-                MessageBox.Show($"License Issue Successfully with ID = {clsapplicant.LicenseID} ");
-            else
-                MessageBox.Show($"License Issue Failed ");
+            int PersonIDDriver = -1;
+            foreach(DataRow row in clsApplicant.GetApplicationID((int)dt.Rows[0]["ApplicationID"]).Rows)
+            {
+                PersonIDDriver = Convert.ToInt32(row["ApplicantPersonID"]);
+            }
+            if (PersonIDDriver != -1) { 
+                clsApplicant clsDriver = new clsApplicant();
+                clsDriver.ApplicantPersonID = PersonIDDriver;
+                clsDriver.CreatedByUserID = Main.UserID;
+                clsDriver.CreateDate = DateTime.Now;
 
+                if (clsDriver.SaveDrivers()) { 
+                    clsApplicant clsapplicant = new clsApplicant();
+            
+                    clsapplicant.ApplicationID = (int)dt.Rows[0]["ApplicationID"];
+                    clsapplicant.DriverID = clsDriver.DriverID;
+                    clsapplicant.LicenseClass = (int)dt.Rows[0]["LicenseClassID"];
+                    clsapplicant.IssueDate = DateTime.Now;
+                    clsapplicant.ExpirationDate = DateTime.Now.AddYears(10) ;
+                    clsapplicant.IsActive = true;
+                    clsapplicant.PaidFees = 20;
+                    clsapplicant.CreatedByUserID = this.CreatedByID;
+                    clsapplicant.IssueReason =1;
+                    clsapplicant.Notes = textBox1.Text;
+                    if (clsapplicant.SaveLicenses())
+                        MessageBox.Show($"License Issue Successfully with ID = {clsapplicant.LicenseID} ");
+                    else
+                        MessageBox.Show($"License Issue Failed ");
+                }
+            }
+            else
+            {
+
+                MessageBox.Show($"Data Diver Failed to save ");
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

@@ -30,7 +30,7 @@ namespace DVLDProject
             if(string.IsNullOrWhiteSpace(txtCurrent.Text))
             {
                 return false;
-            }else if (string.IsNullOrWhiteSpace(txtCurrent.Text))
+            }else if (string.IsNullOrWhiteSpace(txtNew.Text))
             {
                 return false;
             }
@@ -66,7 +66,7 @@ namespace DVLDProject
                 }
                 else
                 {
-                    MessageBox.Show("Password current is incorect","Warning");
+                    MessageBox.Show("Password current is incorrect","Warning");
                 }
             }
             else
@@ -93,7 +93,16 @@ namespace DVLDProject
         private void txtCurrent_Validating(object sender, CancelEventArgs e)
         {
             ErrorValidating(txtCurrent,e, "Current Password should be have a value");
-           
+            if (dtUser.Rows[0]["Password"].ToString() != txtCurrent.Text)
+            {
+                errorProvider1.SetError(txtCurrent, "Current Password Incorrect !!! ");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtConfirme, "");
+            }
+
         }
 
         private void txtNew_Validating(object sender, CancelEventArgs e)
@@ -108,7 +117,7 @@ namespace DVLDProject
             {
                 e.Cancel=true;
                 txtConfirme.Focus();
-                errorProvider1.SetError(txtConfirme,"Password Incorrect !!! ");
+                errorProvider1.SetError(txtConfirme,"Confirme Password Incorrect !!! ");
             }
             else
             {

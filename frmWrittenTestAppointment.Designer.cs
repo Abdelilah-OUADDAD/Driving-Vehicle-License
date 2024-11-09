@@ -33,11 +33,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taskTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ctrlShowApplicant1 = new DVLDProject.ctrlShowApplicant();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -84,6 +84,29 @@
             this.dataGridView1.Size = new System.Drawing.Size(901, 221);
             this.dataGridView1.TabIndex = 10;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.taskTestToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 101);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // taskTestToolStripMenuItem
+            // 
+            this.taskTestToolStripMenuItem.Name = "taskTestToolStripMenuItem";
+            this.taskTestToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
+            this.taskTestToolStripMenuItem.Text = "Task Test";
+            this.taskTestToolStripMenuItem.Click += new System.EventHandler(this.taskTestToolStripMenuItem_Click);
+            // 
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(855, 668);
@@ -103,28 +126,6 @@
             this.label2.Size = new System.Drawing.Size(116, 20);
             this.label2.TabIndex = 8;
             this.label2.Text = "Appointment:";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem,
-            this.taskTestToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 68);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 32);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // taskTestToolStripMenuItem
-            // 
-            this.taskTestToolStripMenuItem.Name = "taskTestToolStripMenuItem";
-            this.taskTestToolStripMenuItem.Size = new System.Drawing.Size(152, 32);
-            this.taskTestToolStripMenuItem.Text = "Task Test";
-            this.taskTestToolStripMenuItem.Click += new System.EventHandler(this.taskTestToolStripMenuItem_Click);
             // 
             // label1
             // 

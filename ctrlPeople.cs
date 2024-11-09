@@ -2,6 +2,10 @@
 using System;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 
 
@@ -16,7 +20,7 @@ namespace DVLDProject
         }
 
         public clsPerson clsperson;
-        
+        Guid guid = Guid.NewGuid();
         private void _AddPerson()
         {
             clsperson = new clsPerson();
@@ -31,7 +35,15 @@ namespace DVLDProject
             clsperson.Email = txtEmail.Text;
             clsperson.Phone = txtPhone.Text;
             clsperson.NationalityCountryID = clsPerson.GetIDCountry(comboNCID.Text);
-            clsperson.ImagePath = openFileDialog1.FileName;
+            if (filter != "")
+            {
+                clsperson.ImagePath = $@"C:\DVLD-People-Images\{guid}.{ImageFilter}";
+            }
+            else 
+            {
+                clsperson.ImagePath = ""; 
+            }
+
             if (rbMale.Checked)
             {
                 clsperson.Gendor = 0;
@@ -52,18 +64,16 @@ namespace DVLDProject
             int Gender;
             if (rbMale.Checked)
             {
-
                 Gender = 0;
             }
             else
             {
-
                 Gender = 1;
             }
             int Country = clsPerson.GetIDCountry(comboNCID.Text);
             clsperson = new clsPerson(int.Parse(lblPersonID.Text), txtNationalNO.Text, txtFirstName.Text, txtSecondName.Text, txtThirdName.Text
                 , txtLastName.Text, dtpDOB.Value, Gender, txtAddress.Text, txtPhone.Text, txtEmail.Text, Country,
-                openFileDialog1.FileName);
+                $@"C:\DVLD-People-Images\{guid}.{ImageFilter}");
 
             clsperson.Save();
             if (clsperson.isUpdated == true)
@@ -85,6 +95,8 @@ namespace DVLDProject
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 pictureBox1.Load(openFileDialog1.FileName);
+                linkLabelRemove.Visible = true;
+                
             }
         }
 
@@ -131,11 +143,11 @@ namespace DVLDProject
                 _ValideTextBox(txtAddress);
                 return true;
             }
-            else if (txtEmail.Text == "")
-            {
-                _ValideTextBox(txtEmail);
-                return true;
-            }
+            //else if (txtEmail.Text == "")
+            //{
+                //_ValideTextBox(txtEmail);
+              //  return true;
+            //}
 
             return false;
         }
@@ -144,12 +156,22 @@ namespace DVLDProject
         public delegate void SendDataBack(object sender, int id);
         public static event SendDataBack DataBack;
 
+        string ImageFilter;
+        string filter = "";
         private void btnSave_Click(object sender, EventArgs e)
         {
+            
             if (clsPerson.Mode == clsPerson.enMode.enUpdate)
             {
                 if (_CheckValidationText() != true)
                 {
+                     filter = openFileDialog1.FileName;
+                    if (filter != "")
+                    {
+                        ImageFilter = filter.Split('.').Last();
+                        File.Delete(dtperson.Rows[0]["ImagePath"].ToString());
+                        File.Copy(openFileDialog1.FileName, Path.Combine(@"C:\DVLD-People-Images\", Path.GetFileName(guid.ToString() + "." + ImageFilter)), true);
+                    }
                     _UpdatePerson();
                 }
             }
@@ -157,6 +179,12 @@ namespace DVLDProject
             {
                 if (_CheckValidationText() != true)
                 {
+                      
+                     filter = openFileDialog1.FileName;
+                    if (filter != "") {
+                        ImageFilter = filter.Split('.').Last();
+                        File.Copy(openFileDialog1.FileName, Path.Combine(@"C:\DVLD-People-Images\", Path.GetFileName(guid.ToString() + "." + ImageFilter), openFileDialog1.Filter), true);
+                    }
                     _AddPerson();
                     lblAddNew.Text = "Update Person";
                     lblPersonID.Text = clsperson.PersonID.ToString();
@@ -165,8 +193,8 @@ namespace DVLDProject
             
             FormManagePeople frm = new FormManagePeople();
             frm._RefreshData();
-
-            DataBack?.Invoke(this,clsperson.PersonID);
+            try { DataBack?.Invoke(this, clsperson.PersonID); }catch(Exception ex) { Console.WriteLine(ex.Message); }
+            
             
         }
 
@@ -199,7 +227,7 @@ namespace DVLDProject
                     foreach (DataRow row in dtPeople.Rows)
                     {
 
-                        if (row["NationalNo"].ToString() == txtNationalNO.Text)
+                        if (row["NationalNo"].ToString().ToLower() == txtNationalNO.Text.ToLower())
                         {
                             e.Cancel = true;
                             txtNationalNO.Focus();
@@ -249,7 +277,19 @@ namespace DVLDProject
 
         private void txtEmail_Validating(object sender, CancelEventArgs e)
         {
-            _ErrorValidating(txtEmail, e, "Email should have a value");
+           // _ErrorValidating(txtEmail, e, "Email should have a value");
+            if (txtEmail.Text.EndsWith("@gmail.com")|| txtEmail.Text == "")
+            {
+                
+                e.Cancel = false;
+                errorProvider1.SetError(txtEmail, "");
+            }
+            else
+            {
+                e.Cancel = true;
+                txtEmail.Focus();
+                errorProvider1.SetError(txtEmail, "Email Should have @gmail.com");
+            }
         }
 
         private void _FilleComboBox()
@@ -271,14 +311,14 @@ namespace DVLDProject
 
 
         }
-
+        DataTable dtperson;
         public void EditPerson(int PersonID)
         {
 
             _FilleComboBox();
 
             lblAddNew.Text = "Update Person";
-            DataTable dtperson = clsPerson.GetPerson(PersonID);
+            dtperson = clsPerson.GetPerson(PersonID);
             lblPersonID.Text = dtperson.Rows[0]["PersonID"].ToString();
             txtNationalNO.Text = dtperson.Rows[0]["NationalNo"].ToString();
             txtFirstName.Text = dtperson.Rows[0]["FirstName"].ToString();
@@ -310,6 +350,36 @@ namespace DVLDProject
         {
             openFileDialog1.FileName = "";
             pictureBox1.Image = null;
+        }
+
+        private void ctrlPeople_Load(object sender, EventArgs e)
+        {
+            dtpDOB.MaxDate = DateTime.Now.AddYears(-18);
+            
+        }
+
+        private void rbMale_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.person_boy;
+        }
+
+        private void rbFemale_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Properties.Resources.person_girl;
+        }
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

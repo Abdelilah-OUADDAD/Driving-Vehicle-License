@@ -29,11 +29,11 @@ namespace DVLDProject
         {
             cmbFilter.Items.Add("None");
             cmbFilter.Items.Add("L.D.L.AppID");
-            cmbFilter.Items.Add("Class Name");
+            //cmbFilter.Items.Add("Class Name");
             cmbFilter.Items.Add("National No");
             cmbFilter.Items.Add("FullName");
-            cmbFilter.Items.Add("Application Date");
-            cmbFilter.Items.Add("Passed Test Count");
+            //cmbFilter.Items.Add("Application Date");
+            //cmbFilter.Items.Add("Passed Test Count");
             cmbFilter.Items.Add("Status");
 
             cmbFilter.SelectedItem = "None";
@@ -75,21 +75,21 @@ namespace DVLDProject
                 case "L.D.L.AppID":
                     FilterText(data, 0);
                     break;
-                case "Class Name":
-                    FilterText(data, 1);
-                    break;
+                //case "Class Name":
+                //    FilterText(data, 1);
+                //    break;
                 case "National No":
                     FilterText(data, 2);
                     break;
                 case "FullName":
                     FilterText(data, 3);
                     break;
-                case "Application Date":
-                    FilterText(data, 4);
-                    break;
-                case "Passed Test Count":
-                    FilterText(data, 5);
-                    break;
+                //case "Application Date":
+                //    FilterText(data, 4);
+                //    break;
+                //case "Passed Test Count":
+                //    FilterText(data, 5);
+                //    break;
                 case "Status":
                     FilterText(data, 6);
                     break;
@@ -143,6 +143,7 @@ namespace DVLDProject
             frm.ShowDialog();
         }
         DataTable dtLocalview;
+        DataTable dtLDLApp;
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             dtLocalview = clsApplicant.GetLocaleDrivingLicenseApplicationViewID((int)dataGridView1.CurrentRow.Cells[0].Value);
@@ -153,7 +154,7 @@ namespace DVLDProject
                 deletApplicationToolStripMenuItem.Enabled = false;
                 cancelApplicationToolStripMenuItem.Enabled = false;
                 showLicenseToolStripMenuItem.Enabled = false;
-                DataTable dtLDLApp = clsApplicant.GetLocaleDrivingLicenseApplicationID((int)dataGridView1.CurrentRow.Cells[0].Value);
+                dtLDLApp = clsApplicant.GetLocaleDrivingLicenseApplicationID((int)dataGridView1.CurrentRow.Cells[0].Value);
                 if (clsApplicant.FindLicense((int)dtLDLApp.Rows[0]["ApplicationID"]) == true)
                 {
                     issueDrivingLicenseToolStripMenuItem.Enabled = false;
@@ -217,6 +218,16 @@ namespace DVLDProject
 
         private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int LicenseID = -1;
+            DataTable dt = clsApplicant.GetLicenses();
+            foreach(DataRow row in dt.Rows)
+            {
+                if ((int)row["ApplicationID"] == (int)dtLDLApp.Rows[0]["ApplicationID"])
+                {
+                    LicenseID = Convert.ToInt32(row["LicenseID"]);
+                }
+            }
+            frmLicenseInfo.LicenseID = LicenseID;
             frmLicenseInfo frm = new frmLicenseInfo((int)dataGridView1.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
@@ -226,6 +237,11 @@ namespace DVLDProject
            
             FormLicenseHistory frm = new FormLicenseHistory((int)dataGridView1.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
 
         }
     }

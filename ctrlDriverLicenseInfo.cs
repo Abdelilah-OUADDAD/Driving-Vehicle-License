@@ -14,6 +14,7 @@ namespace DVLDProject
     public partial class ctrlDriverLicenseInfo : UserControl
     {
         public int LocalDrivingLicenseApplicationID { get; set; }
+        public int LicenseID { get; set; }
         public ctrlDriverLicenseInfo()
         {
             InitializeComponent();
@@ -64,39 +65,11 @@ namespace DVLDProject
                 Console.WriteLine(e.Message);
             }
 
-            DataTable dApplication = new DataTable();
-            dApplication.Columns.Add("ApplicationID", typeof(int));
-            foreach (DataRow row in clsApplicant.GetApplication().Rows)
-            {
-                if (row["ApplicantPersonID"].ToString() == dtPerson.Rows[0]["PersonID"].ToString() && Convert.ToInt32(row["ApplicationStatus"]) == 3)
-                {
-                    dApplication.Rows.Add(row["ApplicationID"]);
-                    
-                }
-            }
+           
 
-            DataTable dtLicense = new DataTable();
-            dtLicense.Columns.Add("LicenseID", typeof(int));
-            dtLicense.Columns.Add("DriverID", typeof(int));
-            dtLicense.Columns.Add("IssueDate", typeof(DateTime));
-            dtLicense.Columns.Add("ExpirationDate", typeof(DateTime));
-            dtLicense.Columns.Add("IssueReason", typeof(int));
-            dtLicense.Columns.Add("Notes", typeof(string));
-            dtLicense.Columns.Add("IsActive", typeof(bool));
+            DataTable dtLicense = clsApplicant.GetLicensesID(this.LicenseID);
 
-
-
-            foreach (DataRow row in clsApplicant.GetLicenses().Rows)
-            {
-                foreach (DataRow dataRow in dApplication.Rows) { 
-                    if ((int)row["ApplicationID"] == (int)dataRow["ApplicationID"] && (bool)row["IsActive"] == true)
-                    {
-                        dtLicense.Rows.Add(row["LicenseID"], row["DriverID"], row["IssueDate"], row["ExpirationDate"], row["IssueReason"], row["Notes"],
-                             row["IsActive"]);
-                        break;
-                    }
-                }
-            }
+           
             lblLicenseID.Text = dtLicense.Rows[0]["LicenseID"].ToString();
             lblDriverID.Text = dtLicense.Rows[0]["DriverID"].ToString();
             lblIssueDate.Text = dtLicense.Rows[0]["IssueDate"].ToString();
@@ -118,19 +91,25 @@ namespace DVLDProject
             {
                 lblIsActive.Text = "No";
             }
-            switch ((int)dtLicense.Rows[0]["IssueReason"])
+            switch (Convert.ToInt32( dtLicense.Rows[0]["IssueReason"]))
             {
                 case 1:
                     lblIssueReason.Text = "First Time";
                     break;
                 case 2:
-                    lblIssueReason.Text = "Remplace For Dammage";
+                    lblIssueReason.Text = "Renew License";
                     break;
                 case 3:
                     lblIssueReason.Text = "Remplace for Lost";
                     break;
                 case 4:
-                    lblIssueReason.Text = "Fourth Time";
+                    lblIssueReason.Text = "Remplace For Damaged";
+                    break;
+                case 5:
+                    lblIssueReason.Text = "Release Detained ";
+                    break;
+                case 6:
+                    lblIssueReason.Text = "New InterNational Liense";
                     break;
             }
 

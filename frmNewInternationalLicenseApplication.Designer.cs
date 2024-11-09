@@ -39,6 +39,10 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnIssue = new System.Windows.Forms.Button();
             this.gbApplication = new System.Windows.Forms.GroupBox();
+            this.lblInterLicenseID = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblInterAppID = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.lblCreatedBy = new System.Windows.Forms.Label();
             this.lblExpirationDate = new System.Windows.Forms.Label();
             this.lblLocalLicenseID = new System.Windows.Forms.Label();
@@ -51,10 +55,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.lblInterAppID = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.lblInterLicenseID = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.gbFilter.SuspendLayout();
             this.gbApplication.SuspendLayout();
             this.SuspendLayout();
@@ -79,6 +79,7 @@
             this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // textBox1
             // 
@@ -110,6 +111,7 @@
             // 
             // ctrlDriverLicenseInfo1
             // 
+            this.ctrlDriverLicenseInfo1.LicenseID = 0;
             this.ctrlDriverLicenseInfo1.LocalDrivingLicenseApplicationID = 0;
             this.ctrlDriverLicenseInfo1.Location = new System.Drawing.Point(10, 222);
             this.ctrlDriverLicenseInfo1.Name = "ctrlDriverLicenseInfo1";
@@ -126,6 +128,7 @@
             this.LinkNewLicense.TabIndex = 13;
             this.LinkNewLicense.TabStop = true;
             this.LinkNewLicense.Text = "Show New License Info";
+            this.LinkNewLicense.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkNewLicense_LinkClicked);
             // 
             // linkLicenseHistory
             // 
@@ -136,6 +139,7 @@
             this.linkLicenseHistory.TabIndex = 12;
             this.linkLicenseHistory.TabStop = true;
             this.linkLicenseHistory.Text = "Show License History";
+            this.linkLicenseHistory.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLicenseHistory_LinkClicked);
             // 
             // btnClose
             // 
@@ -145,6 +149,7 @@
             this.btnClose.TabIndex = 11;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnIssue
             // 
@@ -181,6 +186,42 @@
             this.gbApplication.TabIndex = 9;
             this.gbApplication.TabStop = false;
             this.gbApplication.Text = "Application Info:";
+            // 
+            // lblInterLicenseID
+            // 
+            this.lblInterLicenseID.AutoSize = true;
+            this.lblInterLicenseID.Location = new System.Drawing.Point(759, 64);
+            this.lblInterLicenseID.Name = "lblInterLicenseID";
+            this.lblInterLicenseID.Size = new System.Drawing.Size(36, 20);
+            this.lblInterLicenseID.TabIndex = 15;
+            this.lblInterLicenseID.Text = "???";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(543, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(111, 20);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "I.L.License ID:";
+            // 
+            // lblInterAppID
+            // 
+            this.lblInterAppID.AutoSize = true;
+            this.lblInterAppID.Location = new System.Drawing.Point(195, 64);
+            this.lblInterAppID.Name = "lblInterAppID";
+            this.lblInterAppID.Size = new System.Drawing.Size(36, 20);
+            this.lblInterAppID.TabIndex = 13;
+            this.lblInterAppID.Text = "???";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(15, 64);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(134, 20);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "I.L.Application ID:";
             // 
             // lblCreatedBy
             // 
@@ -289,42 +330,6 @@
             this.label3.Size = new System.Drawing.Size(130, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "Application Date:";
-            // 
-            // lblInterAppID
-            // 
-            this.lblInterAppID.AutoSize = true;
-            this.lblInterAppID.Location = new System.Drawing.Point(195, 64);
-            this.lblInterAppID.Name = "lblInterAppID";
-            this.lblInterAppID.Size = new System.Drawing.Size(36, 20);
-            this.lblInterAppID.TabIndex = 13;
-            this.lblInterAppID.Text = "???";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(15, 64);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 20);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "I.L.Application ID:";
-            // 
-            // lblInterLicenseID
-            // 
-            this.lblInterLicenseID.AutoSize = true;
-            this.lblInterLicenseID.Location = new System.Drawing.Point(759, 64);
-            this.lblInterLicenseID.Name = "lblInterLicenseID";
-            this.lblInterLicenseID.Size = new System.Drawing.Size(36, 20);
-            this.lblInterLicenseID.TabIndex = 15;
-            this.lblInterLicenseID.Text = "???";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(543, 64);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(111, 20);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "I.L.License ID:";
             // 
             // frmNewInternationalLicenseApplication
             // 

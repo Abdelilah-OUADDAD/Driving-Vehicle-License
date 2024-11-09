@@ -66,7 +66,7 @@ namespace DVLDProject
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmScheduleWrittenTest frm = new frmScheduleWrittenTest(AppID, ClassName, FullName, CreatedByID);
+            frmScheduleWrittenTest frm = new frmScheduleWrittenTest(AppID, ClassName, FullName, CreatedByID, -1, false,true);
             frm.ShowDialog();
             _FillDataGrid();
         }
@@ -81,6 +81,14 @@ namespace DVLDProject
                 _FillDataGrid();
                 ctrlShowApplicant1.FillDetailsApp(AppID);
             }
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmScheduleWrittenTest frm = new frmScheduleWrittenTest(AppID, ClassName, FullName, CreatedByID,
+                (int)dataGridView1.CurrentRow.Cells[0].Value,  true, false);
+            frm.ShowDialog();
+            _FillDataGrid();
         }
     }
 }

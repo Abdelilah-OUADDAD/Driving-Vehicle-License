@@ -39,6 +39,7 @@ namespace DVLDProject
                     
                 }
             }
+            // -- Fill License
             DataTable dtLicense = new DataTable();
             dtLicense.Columns.Add("Lic.ID", typeof(int));
             dtLicense.Columns.Add("App.ID", typeof(int));
@@ -54,13 +55,36 @@ namespace DVLDProject
                     {
                         dtLicense.Rows.Add(row["LicenseID"], row["ApplicationID"], clsApplicant.GetLicensesClassName(Convert.ToInt32( row["LicenseClass"])), row["IssueDate"]
                             , row["ExpirationDate"], row["IsActive"]);
+                        break;
                     }
                 }
             }
             ctrlLicenseHistory2.PersonID = (int)dtApplication.Rows[0]["ApplicantPersonID"];
             ctrlLicenseHistory2.dtLicense = dtLicense;
-            
-            
+
+            //-- Fill InternationalLicense
+
+            DataTable dtLicenseInternational = new DataTable();
+            dtLicenseInternational.Columns.Add("Int.License ID", typeof(int));
+            dtLicenseInternational.Columns.Add("Application ID", typeof(int));
+            dtLicenseInternational.Columns.Add("L.License ID", typeof(int));
+            dtLicenseInternational.Columns.Add("Issue Date", typeof(DateTime));
+            dtLicenseInternational.Columns.Add("Expiration Date", typeof(DateTime));
+            dtLicenseInternational.Columns.Add("IsActive", typeof(bool));
+            foreach (DataRow row in clsApplicant.GetInternationalLicense().Rows)
+            {
+                foreach (DataRow row2 in dtGetApplicantID.Rows)
+                {
+                    if ((int)row["ApplicationID"] == (int)row2["ApplicationID"])
+                    {
+                        dtLicenseInternational.Rows.Add(row["InternationalLicenseID"], row["ApplicationID"], row["IssuedUsingLocalLicenseID"]
+                            , row["IssueDate"], row["ExpirationDate"], row["IsActive"]);
+                        break;
+                    }
+                }
+            }
+            ctrlLicenseHistory2.dtLicenseInternational = dtLicenseInternational;
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)

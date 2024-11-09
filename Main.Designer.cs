@@ -122,12 +122,14 @@
             this.internationnalToolStripMenuItem.Name = "internationnalToolStripMenuItem";
             this.internationnalToolStripMenuItem.Size = new System.Drawing.Size(274, 34);
             this.internationnalToolStripMenuItem.Text = "International License";
+            this.internationnalToolStripMenuItem.Click += new System.EventHandler(this.internationnalToolStripMenuItem_Click);
             // 
             // renewDrinvingLicenseToolStripMenuItem
             // 
             this.renewDrinvingLicenseToolStripMenuItem.Name = "renewDrinvingLicenseToolStripMenuItem";
             this.renewDrinvingLicenseToolStripMenuItem.Size = new System.Drawing.Size(452, 34);
             this.renewDrinvingLicenseToolStripMenuItem.Text = "Renew Drinving License";
+            this.renewDrinvingLicenseToolStripMenuItem.Click += new System.EventHandler(this.renewDrinvingLicenseToolStripMenuItem_Click);
             // 
             // rempleceToolStripMenuItem
             // 
@@ -215,12 +217,14 @@
             this.manageApplicationToolStripMenuItem.Name = "manageApplicationToolStripMenuItem";
             this.manageApplicationToolStripMenuItem.Size = new System.Drawing.Size(331, 34);
             this.manageApplicationToolStripMenuItem.Text = "Manage Applications Types";
+            this.manageApplicationToolStripMenuItem.Click += new System.EventHandler(this.manageApplicationToolStripMenuItem_Click);
             // 
             // manageTestTypesToolStripMenuItem
             // 
             this.manageTestTypesToolStripMenuItem.Name = "manageTestTypesToolStripMenuItem";
             this.manageTestTypesToolStripMenuItem.Size = new System.Drawing.Size(331, 34);
             this.manageTestTypesToolStripMenuItem.Text = "Manage Test Types";
+            this.manageTestTypesToolStripMenuItem.Click += new System.EventHandler(this.manageTestTypesToolStripMenuItem_Click);
             // 
             // peopleToolStripMenuItem
             // 
@@ -234,6 +238,7 @@
             this.driversToolStripMenuItem.Name = "driversToolStripMenuItem";
             this.driversToolStripMenuItem.Size = new System.Drawing.Size(83, 29);
             this.driversToolStripMenuItem.Text = "Drivers";
+            this.driversToolStripMenuItem.Click += new System.EventHandler(this.driversToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 
@@ -255,22 +260,23 @@
             // aToolStripMenuItem
             // 
             this.aToolStripMenuItem.Name = "aToolStripMenuItem";
-            this.aToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
+            this.aToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.aToolStripMenuItem.Text = "Current User Info";
             this.aToolStripMenuItem.Click += new System.EventHandler(this.aToolStripMenuItem_Click);
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // signOutToolStripMenuItem
             // 
             this.signOutToolStripMenuItem.Name = "signOutToolStripMenuItem";
-            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(254, 34);
+            this.signOutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.signOutToolStripMenuItem.Text = "Sign Out";
+            this.signOutToolStripMenuItem.Click += new System.EventHandler(this.signOutToolStripMenuItem_Click);
             // 
             // Main
             // 

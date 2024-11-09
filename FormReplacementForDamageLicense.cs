@@ -33,34 +33,36 @@ namespace DVLDProject
         private void FillLicenseInfo()
         {
              dtLic = clsApplicant.GetLicensesID(Convert.ToInt32(textBox1.Text));
-            ApplicationID = Convert.ToInt32(dtLic.Rows[0]["ApplicationID"]);
-
-            DataTable dtLocal = clsApplicant.GetLocaleDrivingLicenseApplication();
-            foreach (DataRow dr in dtLocal.Rows)
+            try
             {
-                if ((int)dr["ApplicationID"] == (int)dtLic.Rows[0]["ApplicationID"])
+                ApplicationID = Convert.ToInt32(dtLic.Rows[0]["ApplicationID"]);
+                DataTable dtLocal = clsApplicant.GetLocaleDrivingLicenseApplication();
+                foreach (DataRow dr in dtLocal.Rows)
                 {
-                    ctrlDriverLicenseInfo1.LocalDrivingLicenseApplicationID = Convert.ToInt32(dr["LocalDrivingLicenseApplicationID"]);
-                    
-                    ctrlDriverLicenseInfo1.FillDrivingInfo();
-                    break;
+                    if ((int)dr["ApplicationID"] == (int)dtLic.Rows[0]["ApplicationID"])
+                    {
+                        ctrlDriverLicenseInfo1.LocalDrivingLicenseApplicationID = Convert.ToInt32(dr["LocalDrivingLicenseApplicationID"]);
+                        ctrlDriverLicenseInfo1.LicenseID = (int)dtLic.Rows[0]["ApplicationID"];
+                        ctrlDriverLicenseInfo1.FillDrivingInfo();
+                        break;
+                    }
+                }
+
+                lblOldLicenseID.Text = dtLic.Rows[0]["LicenseID"].ToString();
+
+                if (Convert.ToBoolean(dtLic.Rows[0]["IsActive"]) == true)
+                {
+                    btnIssue.Enabled = true;
+                }
+                else if (Convert.ToBoolean(dtLic.Rows[0]["IsActive"]) == false)
+                {
+                    MessageBox.Show("Selected License is not Active,choose an Active License", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
                 }
             }
-
-            lblOldLicenseID.Text = textBox1.Text;
-
-            if (Convert.ToBoolean(dtLic.Rows[0]["IsActive"]) == true)
+            catch(Exception ex) 
             {
-                btnIssue.Enabled = true;
-            }
-            else if (Convert.ToBoolean(dtLic.Rows[0]["IsActive"]) == false)
-            {
-                MessageBox.Show("Selected License is not Active,choose an Active License", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
-                MessageBox.Show("Selected License is not Found", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"Selected License is not Found {ex.Message}", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
         private void btnSearch_Click(object sender, EventArgs e)
@@ -98,17 +100,16 @@ namespace DVLDProject
                 cls.PaidFees = Convert.ToDouble(dtApplication.Rows[0]["PaidFees"]);
                 cls.CreatedByUserID = (int)dtApplication.Rows[0]["CreatedByUserID"];
                 cls.LicenseClassID = (int)dt.Rows[0]["LicenseClassID"];
-                if (cls.Save()) { 
+                if (cls.SaveApplication()) { 
 
                     //-- Add License
                     clsapplicant.ApplicationID = cls.ApplicationID;
                     clsapplicant.DriverID = 9;
                     clsapplicant.LicenseClass = (int)dt.Rows[0]["LicenseClassID"];
                     clsapplicant.IssueDate = DateTime.Now;
-                    clsapplicant.ExpirationDate = DateTime.Now;
+                    clsapplicant.ExpirationDate = DateTime.Now.AddYears(10);
                     clsapplicant.Notes = dtLic.Rows[0]["Notes"].ToString();                
                     clsapplicant.IsActive = true;
-                    clsapplicant.ExpirationDate = DateTime.Now;
                     clsapplicant.PaidFees = 20;
                     clsapplicant.CreatedByUserID = Main.UserID;
             
@@ -143,6 +144,7 @@ namespace DVLDProject
 
         private void LinkNewLicense_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            frmLicenseInfo.LicenseID = clsapplicant.LicenseID;
             frmLicenseInfo frm = new frmLicenseInfo(cls.LocalDrivingLicenseApplicationID);
             frm.ShowDialog();
         }

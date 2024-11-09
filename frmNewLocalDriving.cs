@@ -80,7 +80,6 @@ namespace DVLDProject
             if (isNoteSameClassName == false) { 
                 clsApplicant App = new clsApplicant();
                 App.ApplicantPersonID = (int)dtPerson.Rows[0]["PersonID"];
-                App.ApplicationDate = Convert.ToDateTime(lblAppDate.Text);
                 App.ApplicationTypeID = 1;
                 App.ApplicationStatus = 1;
                 App.ApplicationDate = DateTime.Now;

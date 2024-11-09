@@ -31,7 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkRemeber = new System.Windows.Forms.CheckBox();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
@@ -67,15 +67,16 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Password:";
             // 
-            // checkBox1
+            // checkRemeber
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(365, 287);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(144, 24);
-            this.checkBox1.TabIndex = 3;
-            this.checkBox1.Text = "Remember Me.";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkRemeber.AutoSize = true;
+            this.checkRemeber.Location = new System.Drawing.Point(365, 287);
+            this.checkRemeber.Name = "checkRemeber";
+            this.checkRemeber.Size = new System.Drawing.Size(144, 24);
+            this.checkRemeber.TabIndex = 3;
+            this.checkRemeber.Text = "Remember Me.";
+            this.checkRemeber.UseVisualStyleBackColor = true;
+            this.checkRemeber.CheckedChanged += new System.EventHandler(this.checkRemeber_CheckedChanged);
             // 
             // txtUserName
             // 
@@ -111,12 +112,13 @@
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.checkRemeber);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,7 +129,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox checkRemeber;
         private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;

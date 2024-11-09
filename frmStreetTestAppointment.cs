@@ -57,7 +57,7 @@ namespace DVLDProject
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            frmScheduleStreetTest frm = new frmScheduleStreetTest( AppID, ClassName, FullName, CreatedByID);
+            frmScheduleStreetTest frm = new frmScheduleStreetTest( AppID, ClassName, FullName, CreatedByID, -1, false,true);
             frm.ShowDialog();
             _FillDataGrid();
         }
@@ -77,6 +77,14 @@ namespace DVLDProject
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmScheduleStreetTest frm = new frmScheduleStreetTest(AppID, ClassName, FullName, CreatedByID,(int)dataGridView1.CurrentRow.Cells[0].Value,
+                true, false);
+            frm.ShowDialog();
+            _FillDataGrid();
         }
     }
 }

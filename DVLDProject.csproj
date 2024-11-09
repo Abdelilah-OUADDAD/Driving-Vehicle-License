@@ -64,6 +64,12 @@
     <Compile Include="ctrlDetailsPerson.Designer.cs">
       <DependentUpon>ctrlDetailsPerson.cs</DependentUpon>
     </Compile>
+    <Compile Include="ctrlDriverInterLicenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlDriverInterLicenseInfo.Designer.cs">
+      <DependentUpon>ctrlDriverInterLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="ctrlDriverLicenseInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -124,6 +130,12 @@
     <Compile Include="FormLicenseHistory.Designer.cs">
       <DependentUpon>FormLicenseHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormManageApplicationType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageApplicationType.Designer.cs">
+      <DependentUpon>FormManageApplicationType.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormManagePeople.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +159,12 @@
     </Compile>
     <Compile Include="FormChangePassword.Designer.cs">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormManageTestTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManageTestTypes.Designer.cs">
+      <DependentUpon>FormManageTestTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="FormManageUser.cs">
       <SubType>Form</SubType>
@@ -178,11 +196,23 @@
     <Compile Include="FormShowUser.Designer.cs">
       <DependentUpon>FormShowUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInternationalLicenseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInternationalLicenseInfo.Designer.cs">
+      <DependentUpon>frmInternationalLicenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLicenseInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmLicenseInfo.Designer.cs">
       <DependentUpon>frmLicenseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageDrivers.Designer.cs">
+      <DependentUpon>frmManageDrivers.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNewInternationalLicenseApplication.cs">
       <SubType>Form</SubType>
@@ -195,6 +225,12 @@
     </Compile>
     <Compile Include="frmNewLocalDriving.Designer.cs">
       <DependentUpon>frmNewLocalDriving.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRenewLocalDrivingLicense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRenewLocalDrivingLicense.Designer.cs">
+      <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSchedulePassStreetTest.cs">
       <SubType>Form</SubType>
@@ -238,6 +274,18 @@
     <Compile Include="frmStreetTestAppointment.Designer.cs">
       <DependentUpon>frmStreetTestAppointment.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdateApplicationTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateApplicationTypes.Designer.cs">
+      <DependentUpon>frmUpdateApplicationTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUpdateTestType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateTestType.Designer.cs">
+      <DependentUpon>frmUpdateTestType.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmWrittenTestAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,6 +312,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="ctrlAddUser.resx">
       <DependentUpon>ctrlAddUser.cs</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +326,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlDetailsPerson.resx">
       <DependentUpon>ctrlDetailsPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctrlDriverInterLicenseInfo.resx">
+      <DependentUpon>ctrlDriverInterLicenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ctrlDriverLicenseInfo.resx">
       <DependentUpon>ctrlDriverLicenseInfo.cs</DependentUpon>
@@ -303,6 +360,9 @@
     <EmbeddedResource Include="FormLicenseHistory.resx">
       <DependentUpon>FormLicenseHistory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormManageApplicationType.resx">
+      <DependentUpon>FormManageApplicationType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormManagePeople.resx">
       <DependentUpon>FormManagePeople.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,6 +374,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChangePassword.resx">
       <DependentUpon>FormChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManageTestTypes.resx">
+      <DependentUpon>FormManageTestTypes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormManageUser.resx">
       <DependentUpon>FormManageUser.cs</DependentUpon>
@@ -330,14 +393,23 @@
     <EmbeddedResource Include="FormShowUser.resx">
       <DependentUpon>FormShowUser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInternationalLicenseInfo.resx">
+      <DependentUpon>frmInternationalLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLicenseInfo.resx">
       <DependentUpon>frmLicenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageDrivers.resx">
+      <DependentUpon>frmManageDrivers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewInternationalLicenseApplication.resx">
       <DependentUpon>frmNewInternationalLicenseApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNewLocalDriving.resx">
       <DependentUpon>frmNewLocalDriving.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRenewLocalDrivingLicense.resx">
+      <DependentUpon>frmRenewLocalDrivingLicense.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSchedulePassStreetTest.resx">
       <DependentUpon>frmSchedulePassStreetTest.cs</DependentUpon>
@@ -360,6 +432,12 @@
     <EmbeddedResource Include="frmStreetTestAppointment.resx">
       <DependentUpon>frmStreetTestAppointment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateApplicationTypes.resx">
+      <DependentUpon>frmUpdateApplicationTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateTestType.resx">
+      <DependentUpon>frmUpdateTestType.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmWrittenTestAppointment.resx">
       <DependentUpon>frmWrittenTestAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +458,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -400,6 +479,11 @@
       <Name>DVLDBusinessLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\person_boy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_girl.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

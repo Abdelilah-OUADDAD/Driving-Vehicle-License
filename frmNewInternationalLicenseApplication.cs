@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace DVLDProject
 {
@@ -22,46 +24,80 @@ namespace DVLDProject
             lblFees.Text = "50";
             lblAppDate.Text = DateTime.Now.ToString();
             lblExpirationDate.Text = DateTime.Now.ToString();
-            lblCreatedBy.Text = Main.UserName;
         }
 
         DataTable dtLic;
-        clsApplicant clsapplicant = new clsApplicant();
+        clsApplicant clsInterLicense = new clsApplicant();
         int ApplicationID { get; set; }
+        clsApplicant cls;
+       
         private void FillLicenseInfo()
         {
             dtLic = clsApplicant.GetLicensesID(Convert.ToInt32(textBox1.Text));
-            ApplicationID = Convert.ToInt32(dtLic.Rows[0]["ApplicationID"]);
-
-            DataTable dtLocal = clsApplicant.GetLocaleDrivingLicenseApplication();
-            foreach (DataRow dr in dtLocal.Rows)
+            int LDLappId = -1;
+            try
             {
-                if ((int)dr["ApplicationID"] == (int)dtLic.Rows[0]["ApplicationID"])
-                {
-                    ctrlDriverLicenseInfo1.LocalDrivingLicenseApplicationID = Convert.ToInt32(dr["LocalDrivingLicenseApplicationID"]);
+                DataTable dtAp = clsApplicant.GetApplicationID((int)dtLic.Rows[0]["ApplicationID"]);
+                DataTable dtPerson = clsPerson.GetPerson((int)dtAp.Rows[0]["ApplicantPersonID"]);
 
+                foreach (DataRow row in clsApplicant.GetLocaleDrivingLicenseApplicationView().Rows)
+                {
+                    if (row["NationalNo"].ToString() == dtPerson.Rows[0]["NationalNo"].ToString() &&
+                        (int)dtLic.Rows[0]["LicenseClass"] == clsApplicant.ClassName(row["ClassName"].ToString()))
+                    {
+                        LDLappId = (int)row["LocalDrivingLicenseApplicationID"];
+                        break;
+                    }
+                }
+                
+                ApplicationID = Convert.ToInt32(dtLic.Rows[0]["ApplicationID"]);
+                lblLocalLicenseID.Text = dtLic.Rows[0]["LicenseID"].ToString();
+
+                bool IsAppIDFound = false;
+
+                if (LDLappId != -1)
+                {
+                    ctrlDriverLicenseInfo1.LocalDrivingLicenseApplicationID = LDLappId;
+                    ctrlDriverLicenseInfo1.LicenseID = (int)dtLic.Rows[0]["LicenseID"];
                     ctrlDriverLicenseInfo1.FillDrivingInfo();
-                    break;
+                    IsAppIDFound = true;
+
+                }
+                if (IsAppIDFound == false)
+                {
+                    MessageBox.Show($"Local Driving License Application ID is not Found {(int)dtLic.Rows[0]["ApplicationID"]}"
+                    , "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                if (clsApplicant.FindInternationalLicense(int.Parse(textBox1.Text)) == false)
+                {
+                    if (Convert.ToBoolean(dtLic.Rows[0]["IsActive"]) == true)
+                    {
+                        btnIssue.Enabled = true;
+                    }
+                    else
+                    {
+                        btnIssue.Enabled = false;
+                        LinkNewLicense.Enabled = false;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Person already have an active international with ID = {textBox1.Text}","Message",MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    LinkNewLicense.Enabled = true;
+                    dtLic = clsApplicant.GetInternationalLicenseWithLicenseID(Convert.ToInt32(textBox1.Text));
+                    ApplicationID = Convert.ToInt32(dtLic.Rows[0]["ApplicationID"]);
                 }
             }
-
-            if (Convert.ToBoolean(dtLic.Rows[0]["IsActive"]) == true)
+            catch(Exception ex)  
             {
-                btnIssue.Enabled = true;
+                MessageBox.Show($"Selected License is not Found {ex.Message} ", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (Convert.ToBoolean(dtLic.Rows[0]["IsActive"]) == false)
-            {
-                MessageBox.Show("Selected License is not Active,choose an Active License", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-            else
-            {
-                MessageBox.Show("Selected License is not Found", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            
         }
 
       
-        clsApplicant cls;
+        
 
         private void btnIssue_Click(object sender, EventArgs e)
         {
@@ -78,39 +114,61 @@ namespace DVLDProject
             cls.PaidFees = Convert.ToDouble(dtApplication.Rows[0]["PaidFees"]);
             cls.CreatedByUserID = (int)dtApplication.Rows[0]["CreatedByUserID"];
             cls.LicenseClassID = (int)dt.Rows[0]["LicenseClassID"];
-            if (cls.Save())
+            if (cls.SaveApplication())
             {
 
-                //-- Add License
-                clsapplicant.ApplicationID = cls.ApplicationID;
-                clsapplicant.DriverID = 9;
-                clsapplicant.LicenseClass = (int)dt.Rows[0]["LicenseClassID"];
-                clsapplicant.IssueDate = DateTime.Now;
-                clsapplicant.ExpirationDate = DateTime.Now;
-                clsapplicant.Notes = dtLic.Rows[0]["Notes"].ToString();
-                clsapplicant.IsActive = true;
-                clsapplicant.ExpirationDate = DateTime.Now;
-                clsapplicant.PaidFees = 20;
-                clsapplicant.CreatedByUserID = Main.UserID;
+                //-- Add International License
+                clsInterLicense.ApplicationID = cls.ApplicationID;
+                clsInterLicense.DriverID = 8;
+                clsInterLicense.IssuedUsingLocalLicenseID = Convert.ToInt32(dtLic.Rows[0]["LicenseID"]);
+                clsInterLicense.IssueDate = DateTime.Now;
+                clsInterLicense.ExpirationDate = DateTime.Now.AddYears(1);
+                clsInterLicense.IsActive = true;
+                clsInterLicense.CreatedByUserID = Main.UserID;
 
 
-                if (MessageBox.Show($"Are you sure you want to issue a Remplacement for the license? ", "Data Saved"
+                if (MessageBox.Show($"Are you sure you want to issue  the license? ", "Data Saved"
                     , MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
-                    if (clsapplicant.SaveLicenses())
+                    if (clsInterLicense.SaveInternationalLicense())
                     {
-                        MessageBox.Show($"License Issue Successfully with ID = {clsapplicant.LicenseID} ");
+                        MessageBox.Show($"International License Issue Successfully with ID = {clsInterLicense.InternationalLicense} ");
                         LinkNewLicense.Enabled = true;
-                            
-                            
-                        lblLocalLicenseID.Text = clsapplicant.LicenseID.ToString();
-                        lblAppDate.Text = cls.ApplicationID.ToString();
+
+
+                        lblInterLicenseID.Text = clsInterLicense.InternationalLicense.ToString();
+                        lblInterAppID.Text = cls.ApplicationID.ToString();
                     }
                 }
                 else
                     MessageBox.Show($"License Issue Failed ", "Data Saved");
             }
+         
             
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+                FillLicenseInfo();
+        }
+
+        private void linkLicenseHistory_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormLicenseHistory frm = new FormLicenseHistory(ctrlDriverLicenseInfo1.LocalDrivingLicenseApplicationID);
+            frm.ShowDialog();
+        }
+
+        private void LinkNewLicense_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmInternationalLicenseInfo frm = new frmInternationalLicenseInfo();
+            DataTable dt = clsApplicant.GetInternationalLicenseWithLicenseID(int.Parse(textBox1.Text));
+            frm.FillInterDrivingInfo((int)dt.Rows[0]["InternationalLicenseID"], ApplicationID, Convert.ToInt32(dt.Rows[0]["IssuedUsingLocalLicenseID"]));
+            frm.ShowDialog();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

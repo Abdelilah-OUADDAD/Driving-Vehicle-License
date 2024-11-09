@@ -28,11 +28,25 @@ namespace DVLDProject
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            if (ctrlAddUser1.PersonIDForUser != 0)
+            if (ctrlAddUser1.PersonIDForUser != 0  )
             {
-                tabControl.SelectTab(tabLogin);
+                
                 btnSave.Enabled = true;
+                if (clsUser.GetUserID(ctrlAddUser1.PersonIDForUser) && clsUser.Mode == clsUser.enMode.enUpdate)
+                {
+                    tabControl.SelectTab(tabLogin);
 
+                }
+                else if(clsUser.GetUserID(ctrlAddUser1.PersonIDForUser))
+                {
+                    MessageBox.Show($"{ctrlAddUser1.PersonIDForUser} ID already he is a User Choose an other Person !", "Alert \a",
+                        MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+                else
+                {
+                    tabControl.SelectTab(tabLogin);
+                }
             }
 
         }
@@ -101,27 +115,10 @@ namespace DVLDProject
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-
             if (_CheckValidateText())
             {
-                if (clsUser.GetUserID(ctrlAddUser1.PersonIDForUser))
-                {
-                    if (clsUser.Mode == clsUser.enMode.enUpdate)
-                    {
-                        AddEditeUser();
-                    }
-                    else
-                    {
-                        MessageBox.Show($"{ctrlAddUser1.PersonIDForUser} ID already he is a User Choose an other Person !", "Alert \a", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
-                else
-                {
-                    AddEditeUser();
-                }
+                AddEditeUser();
             }
-
-
         }
 
 
@@ -131,8 +128,6 @@ namespace DVLDProject
 
             if (string.IsNullOrWhiteSpace(textBox.Text))
             {
-                //e.Cancel = true;
-                //textBox.Focus();
                 errorProvider1.SetError(textBox, NameText);
             }
             else
@@ -152,8 +147,7 @@ namespace DVLDProject
             {
                 if (txtPassword.Text != txtConfirmPass.Text)
                 {
-                    //e.Cancel = true;
-                    //txtConfirmPass.Focus();
+                    
                     errorProvider1.SetError(txtConfirmPass, "Confirme Password is not same Password Above");
                 }
                 else
@@ -195,8 +189,8 @@ namespace DVLDProject
             {
                 checkActive.Checked = true;
             }
-            clsUser.Mode = clsUser.enMode.enUpdate;
-
+            ctrlAddUser1.DesableFilter = false;
+            btnSave.Enabled = true;
         }
     }
 

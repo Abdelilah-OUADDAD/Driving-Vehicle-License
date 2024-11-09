@@ -97,6 +97,7 @@
             this.rbFemale.Tag = "1";
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.CheckedChanged += new System.EventHandler(this.rbFemale_CheckedChanged);
             // 
             // rbMale
             // 
@@ -110,6 +111,7 @@
             this.rbMale.Tag = "0";
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.CheckedChanged += new System.EventHandler(this.rbMale_CheckedChanged);
             // 
             // btnSave
             // 
@@ -140,6 +142,7 @@
             this.linkLabelRemove.TabIndex = 88;
             this.linkLabelRemove.TabStop = true;
             this.linkLabelRemove.Text = "Remove";
+            this.linkLabelRemove.Visible = false;
             this.linkLabelRemove.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRemove_LinkClicked);
             // 
             // linkLabelSetImage
@@ -155,6 +158,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = global::DVLDProject.Properties.Resources.person_boy;
             this.pictureBox1.Location = new System.Drawing.Point(885, 253);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(223, 279);
@@ -165,6 +169,7 @@
             // dtpDOB
             // 
             this.dtpDOB.Location = new System.Drawing.Point(562, 268);
+            this.dtpDOB.MinDate = new System.DateTime(1965, 1, 1, 0, 0, 0, 0);
             this.dtpDOB.Name = "dtpDOB";
             this.dtpDOB.Size = new System.Drawing.Size(276, 26);
             this.dtpDOB.TabIndex = 85;
@@ -213,6 +218,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(176, 26);
             this.txtPhone.TabIndex = 79;
+            this.txtPhone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhone_KeyPress);
             this.txtPhone.Validating += new System.ComponentModel.CancelEventHandler(this.txtPhone_Validating);
             // 
             // label9
@@ -413,6 +419,7 @@
             this.Controls.Add(this.label9);
             this.Name = "ctrlPeople";
             this.Size = new System.Drawing.Size(1127, 704);
+            this.Load += new System.EventHandler(this.ctrlPeople_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);

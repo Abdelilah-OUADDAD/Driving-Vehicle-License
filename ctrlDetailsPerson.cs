@@ -27,38 +27,56 @@ namespace DVLDProject
         public static event SendDataBack DataBack;
         public void Form_DataBack(int PersonID)
         {
-            _PersonID = PersonID; 
-             dtPerson = clsPerson.GetPerson(PersonID);
+            if (PersonID != 0) 
+            { 
+                _PersonID = PersonID; 
+                 dtPerson = clsPerson.GetPerson(PersonID);
 
-            lblPersonID.Text = dtPerson.Rows[0]["PersonID"].ToString();
-            lblName.Text = dtPerson.Rows[0]["FirstName"].ToString() + " " + dtPerson.Rows[0]["SecondName"].ToString() + " " + dtPerson.Rows[0]["ThirdName"].ToString()
-                + " " + dtPerson.Rows[0]["LastName"].ToString();
-            lblNationalNo.Text = dtPerson.Rows[0]["NationalNo"].ToString();
-            if (Convert.ToInt32( dtPerson.Rows[0]["Gendor"]) == 0)
-            {
-                lblGendor.Text = "Male";
-            }
-            else if(Convert.ToInt32(dtPerson.Rows[0]["Gendor"]) == 1)
-            {
-                lblGendor.Text = "Female";
-            }
-            lblEmail.Text = dtPerson.Rows[0]["Email"].ToString();
-            lblAddress.Text = dtPerson.Rows[0]["Address"].ToString();
-            lblDOB.Text = dtPerson.Rows[0]["DateOfBirth"].ToString();
-            lblPhone.Text = dtPerson.Rows[0]["Phone"].ToString();
-            lblCountry.Text = clsPerson.GetNameCountry((int)dtPerson.Rows[0]["NationalityCountryID"]);
+                lblPersonID.Text = dtPerson.Rows[0]["PersonID"].ToString();
+                lblName.Text = dtPerson.Rows[0]["FirstName"].ToString() + " " + dtPerson.Rows[0]["SecondName"].ToString() + " " + dtPerson.Rows[0]["ThirdName"].ToString()
+                    + " " + dtPerson.Rows[0]["LastName"].ToString();
+                lblNationalNo.Text = dtPerson.Rows[0]["NationalNo"].ToString();
+                if (Convert.ToInt32( dtPerson.Rows[0]["Gendor"]) == 0)
+                {
+                    lblGendor.Text = "Male";
+                }
+                else if(Convert.ToInt32(dtPerson.Rows[0]["Gendor"]) == 1)
+                {
+                    lblGendor.Text = "Female";
+                }
+                lblEmail.Text = dtPerson.Rows[0]["Email"].ToString();
+                lblAddress.Text = dtPerson.Rows[0]["Address"].ToString();
+                lblDOB.Text = dtPerson.Rows[0]["DateOfBirth"].ToString();
+                lblPhone.Text = dtPerson.Rows[0]["Phone"].ToString();
+                lblCountry.Text = clsPerson.GetNameCountry((int)dtPerson.Rows[0]["NationalityCountryID"]);
 
 
-            try
-            {
-                pictureBox1.Load(dtPerson.Rows[0]["ImagePath"].ToString());
+                try
+                {
+                    pictureBox1.Load(dtPerson.Rows[0]["ImagePath"].ToString());
+                }
+                catch (Exception ex)
+                {
+                    pictureBox1.Image = null;
+                    Console.WriteLine(ex.Message);
+                }
+                DataBack?.Invoke(this, dtPerson);
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            DataBack?.Invoke(this, dtPerson);
+            else { FillUnkhowPerson(); }
 
+        }
+
+        private void FillUnkhowPerson()
+        {
+            lblPersonID.Text = "???";
+            lblName.Text = "???";
+            lblNationalNo.Text = "???";
+            lblGendor.Text = "???";
+            lblEmail.Text= "???";
+            lblAddress.Text = "???";
+            lblDOB.Text= "???";
+            lblPhone.Text = "???";
+            lblCountry.Text = "???";
         }
        
        

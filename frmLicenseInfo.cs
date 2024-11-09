@@ -16,11 +16,12 @@ namespace DVLDProject
         {
             InitializeComponent();
         }
-
+        public static int LicenseID { get; set; }
         public frmLicenseInfo(int LocalLocalDrivingLicenseApplicationID)
         {
             InitializeComponent();
             ctrlDriverLicenseInfo1.LocalDrivingLicenseApplicationID = LocalLocalDrivingLicenseApplicationID;
+            ctrlDriverLicenseInfo1.LicenseID = LicenseID;
             ctrlDriverLicenseInfo1.FillDrivingInfo();
         }
 

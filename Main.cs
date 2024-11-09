@@ -72,5 +72,41 @@ namespace DVLDProject
             FormReplacementForDamageLicense frm = new FormReplacementForDamageLicense();
             frm.ShowDialog();
         }
+
+        private void internationnalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmNewInternationalLicenseApplication frm = new frmNewInternationalLicenseApplication();
+            frm.ShowDialog();
+        }
+
+        private void renewDrinvingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRenewLocalDrivingLicense frm = new frmRenewLocalDrivingLicense();    
+            frm.ShowDialog();
+        }
+
+        private void driversToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmManageDrivers frm = new frmManageDrivers();
+            frm.ShowDialog();
+        }
+
+        private void manageApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormManageApplicationType frm = new FormManageApplicationType();    
+            frm.ShowDialog();
+        }
+
+        private void manageTestTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormManageTestTypes frm = new FormManageTestTypes();
+            frm.ShowDialog();
+        }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+        }
     }
 }

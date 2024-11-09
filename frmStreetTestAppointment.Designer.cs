@@ -97,18 +97,19 @@
             this.editToolStripMenuItem,
             this.taskTestToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 68);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 101);
             // 
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 32);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
             this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
             // 
             // taskTestToolStripMenuItem
             // 
             this.taskTestToolStripMenuItem.Name = "taskTestToolStripMenuItem";
-            this.taskTestToolStripMenuItem.Size = new System.Drawing.Size(152, 32);
+            this.taskTestToolStripMenuItem.Size = new System.Drawing.Size(240, 32);
             this.taskTestToolStripMenuItem.Text = "Task Test";
             this.taskTestToolStripMenuItem.Click += new System.EventHandler(this.taskTestToolStripMenuItem_Click);
             // 
