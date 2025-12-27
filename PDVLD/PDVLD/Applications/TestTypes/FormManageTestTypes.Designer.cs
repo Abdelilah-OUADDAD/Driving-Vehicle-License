@@ -168,8 +168,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormManageTestTypes";
-            this.Text = "FormManageTestTypes";
+            this.Text = "Manage Test Types";
             this.Load += new System.EventHandler(this.FormManageTestTypes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

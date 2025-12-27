@@ -33,6 +33,12 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showPersonDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showLicenseDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showPersonLiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.releaseDetainLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblRecords = new System.Windows.Forms.Label();
@@ -42,12 +48,6 @@
             this.cmbFilter = new System.Windows.Forms.ComboBox();
             this.txtFilter = new System.Windows.Forms.TextBox();
             this.cmbTrueFalse = new System.Windows.Forms.ComboBox();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.showPersonDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showLicenseDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.showPersonLiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.releaseDetainLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -88,6 +88,60 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(1691, 484);
             this.dataGridView1.TabIndex = 2;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showPersonDetailsToolStripMenuItem,
+            this.showLicenseDetailsToolStripMenuItem,
+            this.showPersonLiceToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.releaseDetainLicenseToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(326, 170);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // showPersonDetailsToolStripMenuItem
+            // 
+            this.showPersonDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showPersonDetailsToolStripMenuItem.Image")));
+            this.showPersonDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showPersonDetailsToolStripMenuItem.Name = "showPersonDetailsToolStripMenuItem";
+            this.showPersonDetailsToolStripMenuItem.Size = new System.Drawing.Size(325, 40);
+            this.showPersonDetailsToolStripMenuItem.Text = "Show Person Details";
+            this.showPersonDetailsToolStripMenuItem.Click += new System.EventHandler(this.showPersonDetailsToolStripMenuItem_Click);
+            // 
+            // showLicenseDetailsToolStripMenuItem
+            // 
+            this.showLicenseDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showLicenseDetailsToolStripMenuItem.Image")));
+            this.showLicenseDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showLicenseDetailsToolStripMenuItem.Name = "showLicenseDetailsToolStripMenuItem";
+            this.showLicenseDetailsToolStripMenuItem.Size = new System.Drawing.Size(325, 40);
+            this.showLicenseDetailsToolStripMenuItem.Text = "Show License Details";
+            this.showLicenseDetailsToolStripMenuItem.Click += new System.EventHandler(this.showLicenseDetailsToolStripMenuItem_Click);
+            // 
+            // showPersonLiceToolStripMenuItem
+            // 
+            this.showPersonLiceToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showPersonLiceToolStripMenuItem.Image")));
+            this.showPersonLiceToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.showPersonLiceToolStripMenuItem.Name = "showPersonLiceToolStripMenuItem";
+            this.showPersonLiceToolStripMenuItem.Size = new System.Drawing.Size(325, 40);
+            this.showPersonLiceToolStripMenuItem.Text = "Show Person License History";
+            this.showPersonLiceToolStripMenuItem.Click += new System.EventHandler(this.showPersonLiceToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(322, 6);
+            // 
+            // releaseDetainLicenseToolStripMenuItem
+            // 
+            this.releaseDetainLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("releaseDetainLicenseToolStripMenuItem.Image")));
+            this.releaseDetainLicenseToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.releaseDetainLicenseToolStripMenuItem.Name = "releaseDetainLicenseToolStripMenuItem";
+            this.releaseDetainLicenseToolStripMenuItem.Size = new System.Drawing.Size(325, 40);
+            this.releaseDetainLicenseToolStripMenuItem.Text = "Release Detain License";
+            this.releaseDetainLicenseToolStripMenuItem.Click += new System.EventHandler(this.releaseDetainLicenseToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -197,60 +251,6 @@
             this.cmbTrueFalse.Visible = false;
             this.cmbTrueFalse.SelectedIndexChanged += new System.EventHandler(this.cmbTrueFalse_SelectedIndexChanged);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showPersonDetailsToolStripMenuItem,
-            this.showLicenseDetailsToolStripMenuItem,
-            this.showPersonLiceToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.releaseDetainLicenseToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(326, 170);
-            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
-            // 
-            // showPersonDetailsToolStripMenuItem
-            // 
-            this.showPersonDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showPersonDetailsToolStripMenuItem.Image")));
-            this.showPersonDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.showPersonDetailsToolStripMenuItem.Name = "showPersonDetailsToolStripMenuItem";
-            this.showPersonDetailsToolStripMenuItem.Size = new System.Drawing.Size(325, 40);
-            this.showPersonDetailsToolStripMenuItem.Text = "Show Person Details";
-            this.showPersonDetailsToolStripMenuItem.Click += new System.EventHandler(this.showPersonDetailsToolStripMenuItem_Click);
-            // 
-            // showLicenseDetailsToolStripMenuItem
-            // 
-            this.showLicenseDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showLicenseDetailsToolStripMenuItem.Image")));
-            this.showLicenseDetailsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.showLicenseDetailsToolStripMenuItem.Name = "showLicenseDetailsToolStripMenuItem";
-            this.showLicenseDetailsToolStripMenuItem.Size = new System.Drawing.Size(325, 40);
-            this.showLicenseDetailsToolStripMenuItem.Text = "Show License Details";
-            this.showLicenseDetailsToolStripMenuItem.Click += new System.EventHandler(this.showLicenseDetailsToolStripMenuItem_Click);
-            // 
-            // showPersonLiceToolStripMenuItem
-            // 
-            this.showPersonLiceToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showPersonLiceToolStripMenuItem.Image")));
-            this.showPersonLiceToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.showPersonLiceToolStripMenuItem.Name = "showPersonLiceToolStripMenuItem";
-            this.showPersonLiceToolStripMenuItem.Size = new System.Drawing.Size(325, 40);
-            this.showPersonLiceToolStripMenuItem.Text = "Show Person License History";
-            this.showPersonLiceToolStripMenuItem.Click += new System.EventHandler(this.showPersonLiceToolStripMenuItem_Click);
-            // 
-            // releaseDetainLicenseToolStripMenuItem
-            // 
-            this.releaseDetainLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("releaseDetainLicenseToolStripMenuItem.Image")));
-            this.releaseDetainLicenseToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.releaseDetainLicenseToolStripMenuItem.Name = "releaseDetainLicenseToolStripMenuItem";
-            this.releaseDetainLicenseToolStripMenuItem.Size = new System.Drawing.Size(325, 40);
-            this.releaseDetainLicenseToolStripMenuItem.Text = "Release Detain License";
-            this.releaseDetainLicenseToolStripMenuItem.Click += new System.EventHandler(this.releaseDetainLicenseToolStripMenuItem_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(322, 6);
-            // 
             // FormManageDetainLicenses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -270,8 +270,9 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormManageDetainLicenses";
-            this.Text = "FormManageDetainLicenses";
+            this.Text = "Manage Detain Licenses";
             this.Load += new System.EventHandler(this.FormManageDetainLicenses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -115,8 +115,9 @@
             this.Controls.Add(this.txtNote);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ctrlDrivingLicenseApplicationInfo1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormIssueDrivingLicense";
-            this.Text = "FormIssueDrivingLicense";
+            this.Text = "Issue Driving License";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -46,7 +46,7 @@ namespace PDVLD
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            if (clsUsers.GetLogin(txtUsername.Text, ComputeHash(txtPassword.Text)))
+            if (clsUsers.GetLogin(txtUsername.Text, txtPassword.Text))
             {
                 clsGlobal.UserName = txtUsername.Text;
                 clsGlobal.Password = txtPassword.Text;

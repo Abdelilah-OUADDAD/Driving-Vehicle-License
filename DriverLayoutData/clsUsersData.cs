@@ -70,7 +70,7 @@ namespace DriverLayoutData
 
                         using (SqlDataReader reader = command.ExecuteReader())
                         {
-                            if (reader.Read())
+                            if (reader.HasRows)
                             {
                                 isFound = true;
                             }

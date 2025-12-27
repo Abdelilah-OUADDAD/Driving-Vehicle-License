@@ -475,8 +475,9 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnSave);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormTakeTest";
-            this.Text = "FormTakeTest";
+            this.Text = "Take Test";
             this.Load += new System.EventHandler(this.FormTakeTest_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

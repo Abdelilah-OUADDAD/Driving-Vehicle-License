@@ -1,30 +1,28 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\",
+  "WorkspaceRootPath": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|c:\\users\\dell\\source\\repos\\pdvld_project\\pdvld\\pdvld\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\pdvld\\pdvld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\pdvld\\pdvld\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\pdvld\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\pdvld\\pdvld\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\pdvld\\applications\\detainlicense\\formmanagedetainlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\applications\\detainlicense\\formmanagedetainlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{D89CC64A-713C-4299-B1A1-A17F72166DF5}|..\\DriverLayoutData\\DriverLayoutData.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\driverlayoutdata\\clsusersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\pdvld\\applications\\detainlicense\\formmanagedetainlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\applications\\detainlicense\\formmanagedetainlicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D89CC64A-713C-4299-B1A1-A17F72166DF5}|..\\DriverLayoutData\\DriverLayoutData.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\driverlayoutdata\\clsdataaccesssetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\pdvld\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\pdvld\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\pdvld\\pdvld\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,103 +32,83 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Login.cs",
-              "RelativeDocumentMoniker": "PDVLD\\Login.cs",
-              "ToolTip": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Login.cs*",
-              "RelativeToolTip": "PDVLD\\Login.cs*",
-              "ViewState": "AgIAADUAAAAA9v////8owCYAAAAJAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Program.cs",
+              "RelativeDocumentMoniker": "PDVLD\\Program.cs",
+              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Program.cs",
+              "RelativeToolTip": "PDVLD\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T11:40:08.728Z",
+              "WhenOpened": "2025-12-27T14:51:35.685Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\App.config",
+              "RelativeDocumentMoniker": "PDVLD\\App.config",
+              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\App.config",
+              "RelativeToolTip": "PDVLD\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2025-12-27T14:46:36.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "clsUsersData.cs",
+              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\DriverLayoutData\\clsUsersData.cs",
+              "RelativeDocumentMoniker": "..\\DriverLayoutData\\clsUsersData.cs",
+              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\DriverLayoutData\\clsUsersData.cs",
+              "RelativeToolTip": "..\\DriverLayoutData\\clsUsersData.cs",
+              "ViewState": "AgIAACwAAADAy8zMzMwqwDcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T14:44:45.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "clsDataAccessSetting.cs",
+              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\DriverLayoutData\\clsDataAccessSetting.cs",
+              "RelativeDocumentMoniker": "..\\DriverLayoutData\\clsDataAccessSetting.cs",
+              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\DriverLayoutData\\clsDataAccessSetting.cs",
+              "RelativeToolTip": "..\\DriverLayoutData\\clsDataAccessSetting.cs",
+              "ViewState": "AgIAAAYAAAAAZGZmZmYkwAsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T14:44:18.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Login.cs",
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Login.cs",
               "RelativeDocumentMoniker": "PDVLD\\Login.cs",
-              "ToolTip": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Login.cs [Design]*",
-              "RelativeToolTip": "PDVLD\\Login.cs [Design]*",
+              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Login.cs",
+              "RelativeToolTip": "PDVLD\\Login.cs",
+              "ViewState": "AgIAACkAAACAZmZmZmYlwDAAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-09T11:39:55.557Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Main.cs",
-              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Main.cs",
-              "RelativeDocumentMoniker": "PDVLD\\Main.cs",
-              "ToolTip": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Main.cs",
-              "RelativeToolTip": "PDVLD\\Main.cs",
-              "ViewState": "AgIAAEgAAAAANDMzMzMnwI8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T02:09:35.341Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Main.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Main.cs",
-              "RelativeDocumentMoniker": "PDVLD\\Main.cs",
-              "ToolTip": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Main.cs [Design]",
-              "RelativeToolTip": "PDVLD\\Main.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-27T02:09:21.836Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FormManageDetainLicenses.cs",
-              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Applications\\DetainLicense\\FormManageDetainLicenses.cs",
-              "RelativeDocumentMoniker": "PDVLD\\Applications\\DetainLicense\\FormManageDetainLicenses.cs",
-              "ToolTip": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Applications\\DetainLicense\\FormManageDetainLicenses.cs",
-              "RelativeToolTip": "PDVLD\\Applications\\DetainLicense\\FormManageDetainLicenses.cs",
-              "ViewState": "AgIAAGUAAAAAtJmZmZn5v2gAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T23:57:29.073Z",
+              "WhenOpened": "2025-12-27T14:43:36.807Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "FormManageDetainLicenses.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Applications\\DetainLicense\\FormManageDetainLicenses.cs",
-              "RelativeDocumentMoniker": "PDVLD\\Applications\\DetainLicense\\FormManageDetainLicenses.cs",
-              "ToolTip": "C:\\Users\\Dell\\source\\repos\\PDVLD_Project\\PDVLD\\PDVLD\\Applications\\DetainLicense\\FormManageDetainLicenses.cs [Design]",
-              "RelativeToolTip": "PDVLD\\Applications\\DetainLicense\\FormManageDetainLicenses.cs [Design]",
+              "Title": "Login.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Login.cs",
+              "RelativeDocumentMoniker": "PDVLD\\Login.cs",
+              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Login.cs [Design]",
+              "RelativeToolTip": "PDVLD\\Login.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T23:50:26.712Z",
+              "WhenOpened": "2025-12-27T10:03:30.511Z",
               "EditorCaption": " [Design]"
             }
           ]

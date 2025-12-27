@@ -344,8 +344,9 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddNewUser";
-            this.Text = "FormAddNewUser";
+            this.Text = "Add User";
             this.Load += new System.EventHandler(this.FormAddNewUser_Load);
             this.tabControl1.ResumeLayout(false);
             this.tpPersonInfo.ResumeLayout(false);

@@ -222,7 +222,7 @@
             this.Controls.Add(this.txtCurrentPassword);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ctrlChangePassword1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormChangePassword";
             this.Text = "Change Password";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

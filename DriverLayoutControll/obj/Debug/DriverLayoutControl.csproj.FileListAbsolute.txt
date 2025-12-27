@@ -18,3 +18,12 @@ C:\Users\Dell\source\repos\PDVLD_Project\DriverLayoutControll\obj\Debug\DriverLa
 C:\Users\Dell\source\repos\PDVLD_Project\DriverLayoutControll\obj\Debug\DriverLa.DD0B8628.Up2Date
 C:\Users\Dell\source\repos\PDVLD_Project\DriverLayoutControll\obj\Debug\DriverLayoutControll.dll
 C:\Users\Dell\source\repos\PDVLD_Project\DriverLayoutControll\obj\Debug\DriverLayoutControll.pdb
+C:\Users\ouadd\Desktop\ABDOU\DVLD_Project\Driving-Vehicle-License\DriverLayoutControll\bin\Debug\DriverLayoutControll.dll
+C:\Users\ouadd\Desktop\ABDOU\DVLD_Project\Driving-Vehicle-License\DriverLayoutControll\bin\Debug\DriverLayoutControll.pdb
+C:\Users\ouadd\Desktop\ABDOU\DVLD_Project\Driving-Vehicle-License\DriverLayoutControll\bin\Debug\DriverLayoutData.dll
+C:\Users\ouadd\Desktop\ABDOU\DVLD_Project\Driving-Vehicle-License\DriverLayoutControll\bin\Debug\DriverLayoutData.pdb
+C:\Users\ouadd\Desktop\ABDOU\DVLD_Project\Driving-Vehicle-License\DriverLayoutControll\obj\Debug\DriverLayoutControl.csproj.AssemblyReference.cache
+C:\Users\ouadd\Desktop\ABDOU\DVLD_Project\Driving-Vehicle-License\DriverLayoutControll\obj\Debug\DriverLayoutControl.csproj.CoreCompileInputs.cache
+C:\Users\ouadd\Desktop\ABDOU\DVLD_Project\Driving-Vehicle-License\DriverLayoutControll\obj\Debug\DriverLa.DD0B8628.Up2Date
+C:\Users\ouadd\Desktop\ABDOU\DVLD_Project\Driving-Vehicle-License\DriverLayoutControll\obj\Debug\DriverLayoutControll.dll
+C:\Users\ouadd\Desktop\ABDOU\DVLD_Project\Driving-Vehicle-License\DriverLayoutControll\obj\Debug\DriverLayoutControll.pdb

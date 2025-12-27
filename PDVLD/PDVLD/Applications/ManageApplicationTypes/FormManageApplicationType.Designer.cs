@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManageApplicationType));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.lblRecord = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editApplicationTypeToolStripMenuItem = new System.Windows.Forms.ToolStripSeparator();
             this.editApplicationTypeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblRecord = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -61,6 +61,35 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(928, 364);
             this.dataGridView1.TabIndex = 1;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editApplicationTypeToolStripMenuItem,
+            this.editApplicationTypeToolStripMenuItem1,
+            this.toolStripMenuItem1});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(268, 56);
+            // 
+            // editApplicationTypeToolStripMenuItem
+            // 
+            this.editApplicationTypeToolStripMenuItem.Name = "editApplicationTypeToolStripMenuItem";
+            this.editApplicationTypeToolStripMenuItem.Size = new System.Drawing.Size(264, 6);
+            // 
+            // editApplicationTypeToolStripMenuItem1
+            // 
+            this.editApplicationTypeToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("editApplicationTypeToolStripMenuItem1.Image")));
+            this.editApplicationTypeToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.editApplicationTypeToolStripMenuItem1.Name = "editApplicationTypeToolStripMenuItem1";
+            this.editApplicationTypeToolStripMenuItem1.Size = new System.Drawing.Size(267, 40);
+            this.editApplicationTypeToolStripMenuItem1.Text = "Edit Application Type";
+            this.editApplicationTypeToolStripMenuItem1.Click += new System.EventHandler(this.editApplicationTypeToolStripMenuItem1_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(264, 6);
             // 
             // label1
             // 
@@ -105,35 +134,6 @@
             this.lblRecord.TabIndex = 5;
             this.lblRecord.Text = "0";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editApplicationTypeToolStripMenuItem,
-            this.editApplicationTypeToolStripMenuItem1,
-            this.toolStripMenuItem1});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(268, 56);
-            // 
-            // editApplicationTypeToolStripMenuItem
-            // 
-            this.editApplicationTypeToolStripMenuItem.Name = "editApplicationTypeToolStripMenuItem";
-            this.editApplicationTypeToolStripMenuItem.Size = new System.Drawing.Size(264, 6);
-            // 
-            // editApplicationTypeToolStripMenuItem1
-            // 
-            this.editApplicationTypeToolStripMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("editApplicationTypeToolStripMenuItem1.Image")));
-            this.editApplicationTypeToolStripMenuItem1.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.editApplicationTypeToolStripMenuItem1.Name = "editApplicationTypeToolStripMenuItem1";
-            this.editApplicationTypeToolStripMenuItem1.Size = new System.Drawing.Size(267, 40);
-            this.editApplicationTypeToolStripMenuItem1.Text = "Edit Application Type";
-            this.editApplicationTypeToolStripMenuItem1.Click += new System.EventHandler(this.editApplicationTypeToolStripMenuItem1_Click);
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(264, 6);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -168,8 +168,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormManageApplicationType";
-            this.Text = "FormManageApplicationType";
+            this.Text = "Manage Application Type";
             this.Load += new System.EventHandler(this.FormManageApplicationType_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

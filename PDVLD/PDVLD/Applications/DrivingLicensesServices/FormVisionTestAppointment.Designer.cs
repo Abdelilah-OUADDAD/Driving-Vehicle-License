@@ -201,8 +201,9 @@
             this.Controls.Add(this.ctrlDrivingLicenseApplicationInfo1);
             this.Controls.Add(this.pbImageGeneral);
             this.Controls.Add(this.lblTitle);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormVisionTestAppointment";
-            this.Text = "FormVisionTestAppointment";
+            this.Text = "Vision Test Appointment";
             this.Load += new System.EventHandler(this.FormVisionTestAppointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);

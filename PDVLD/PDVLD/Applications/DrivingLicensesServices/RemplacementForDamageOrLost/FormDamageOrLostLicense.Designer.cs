@@ -375,8 +375,10 @@
             // 
             // ctrlLicenseInfoWithFilter1
             // 
+            this.ctrlLicenseInfoWithFilter1.ActiveDetainSearch = false;
             this.ctrlLicenseInfoWithFilter1.ActiveInternationalSearch = false;
             this.ctrlLicenseInfoWithFilter1.ActiveLostOrDamageSearch = true;
+            this.ctrlLicenseInfoWithFilter1.ActiveReleaseSearch = false;
             this.ctrlLicenseInfoWithFilter1.ActiveRenewSearch = false;
             this.ctrlLicenseInfoWithFilter1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ctrlLicenseInfoWithFilter1.Location = new System.Drawing.Point(3, 83);
@@ -401,8 +403,9 @@
             this.Controls.Add(this.btnReplacement);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormDamageOrLostLicense";
-            this.Text = "FormDamageOrLostLicense";
+            this.Text = "Damage Or Lost License";
             this.Load += new System.EventHandler(this.FormDamageOrLostLicense_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

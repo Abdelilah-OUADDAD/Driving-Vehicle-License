@@ -391,7 +391,10 @@
             // 
             // ctrlLicenseInfoWithFilter1
             // 
+            this.ctrlLicenseInfoWithFilter1.ActiveDetainSearch = false;
             this.ctrlLicenseInfoWithFilter1.ActiveInternationalSearch = true;
+            this.ctrlLicenseInfoWithFilter1.ActiveLostOrDamageSearch = false;
+            this.ctrlLicenseInfoWithFilter1.ActiveReleaseSearch = false;
             this.ctrlLicenseInfoWithFilter1.ActiveRenewSearch = false;
             this.ctrlLicenseInfoWithFilter1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ctrlLicenseInfoWithFilter1.Location = new System.Drawing.Point(12, 89);
@@ -415,8 +418,9 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.linkLabelHistory);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormInternationalLicense";
-            this.Text = "FormInternationalLicense";
+            this.Text = "International License";
             this.Load += new System.EventHandler(this.FormInternationalLicense_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

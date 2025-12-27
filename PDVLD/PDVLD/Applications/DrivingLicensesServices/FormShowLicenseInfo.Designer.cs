@@ -88,6 +88,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.ctrlLicenseInfo1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormShowLicenseInfo";
             this.Text = "FormShowLicenseInfo";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

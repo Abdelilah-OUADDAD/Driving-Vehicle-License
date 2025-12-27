@@ -486,8 +486,9 @@
             this.Controls.Add(this.lblPersonID);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddNewPerson";
-            this.Text = "FormAddNewPerson";
+            this.Text = "Add Person";
             this.Load += new System.EventHandler(this.FormAddNewPerson_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureImage)).EndInit();

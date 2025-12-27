@@ -486,8 +486,9 @@
             this.Controls.Add(this.pictureBox12);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "FormScheduleTest";
-            this.Text = "FormSheduleTest";
+            this.Text = "Shedule Test";
             this.Load += new System.EventHandler(this.FormScheduleTest_Load);
             this.gbRetakeTest.ResumeLayout(false);
             this.gbRetakeTest.PerformLayout();

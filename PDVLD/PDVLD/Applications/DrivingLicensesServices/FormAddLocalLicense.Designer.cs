@@ -297,8 +297,9 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblTitle);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormAddLocalLicense";
-            this.Text = "FormAddLocalLicense";
+            this.Text = "Add Local License";
             this.Load += new System.EventHandler(this.FormAddLocalLicense_Load);
             this.tabControl1.ResumeLayout(false);
             this.tpPersonalInfo.ResumeLayout(false);

@@ -100,8 +100,9 @@
             this.Controls.Add(this.ctrlInternationalLicenseInfo1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormShowInternationalLicenseInfo";
-            this.Text = "FormShowInternationalLicenseInfo";
+            this.Text = "Show International License Info";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);

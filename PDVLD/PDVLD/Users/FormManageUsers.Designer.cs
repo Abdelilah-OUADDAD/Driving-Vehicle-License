@@ -296,8 +296,9 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormManageUsers";
-            this.Text = "FormManageUsers";
+            this.Text = "Manage Users";
             this.Load += new System.EventHandler(this.FormManageUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
