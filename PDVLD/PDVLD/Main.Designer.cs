@@ -186,7 +186,7 @@
             this.mangeApplicationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.mangeApplicationsToolStripMenuItem.Name = "mangeApplicationsToolStripMenuItem";
             this.mangeApplicationsToolStripMenuItem.Size = new System.Drawing.Size(432, 74);
-            this.mangeApplicationsToolStripMenuItem.Text = "Mange Applications";
+            this.mangeApplicationsToolStripMenuItem.Text = "Manage Applications";
             // 
             // localDrivingLicenseApplicationsToolStripMenuItem
             // 

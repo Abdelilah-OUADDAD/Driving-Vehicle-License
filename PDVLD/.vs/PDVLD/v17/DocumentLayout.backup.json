@@ -3,26 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\pdvld\\pdvld\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\pdvld\\pdvld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\pdvld\\pdvld\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\pdvld\\pdvld\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D89CC64A-713C-4299-B1A1-A17F72166DF5}|..\\DriverLayoutData\\DriverLayoutData.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\driverlayoutdata\\clsusersdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D89CC64A-713C-4299-B1A1-A17F72166DF5}|..\\DriverLayoutData\\DriverLayoutData.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\driverlayoutdata\\clsdataaccesssetting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|c:\\users\\ouadd\\desktop\\abdou\\dvld_project\\driving-vehicle-license\\pdvld\\pdvld\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{3B63B12F-83A3-446B-91BA-80659495C685}|PDVLD\\PDVLD.csproj|solutionrelative:pdvld\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,6 +23,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Main.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Main.cs",
+              "RelativeDocumentMoniker": "PDVLD\\Main.cs",
+              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Main.cs [Design]",
+              "RelativeToolTip": "PDVLD\\Main.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-27T18:38:41.931Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Program.cs",
               "RelativeDocumentMoniker": "PDVLD\\Program.cs",
@@ -46,70 +44,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-27T14:51:35.685Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "App.config",
-              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\App.config",
-              "RelativeDocumentMoniker": "PDVLD\\App.config",
-              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\App.config",
-              "RelativeToolTip": "PDVLD\\App.config",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2025-12-27T14:46:36.644Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "clsUsersData.cs",
-              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\DriverLayoutData\\clsUsersData.cs",
-              "RelativeDocumentMoniker": "..\\DriverLayoutData\\clsUsersData.cs",
-              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\DriverLayoutData\\clsUsersData.cs",
-              "RelativeToolTip": "..\\DriverLayoutData\\clsUsersData.cs",
-              "ViewState": "AgIAACwAAADAy8zMzMwqwDcAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T14:44:45.748Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "clsDataAccessSetting.cs",
-              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\DriverLayoutData\\clsDataAccessSetting.cs",
-              "RelativeDocumentMoniker": "..\\DriverLayoutData\\clsDataAccessSetting.cs",
-              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\DriverLayoutData\\clsDataAccessSetting.cs",
-              "RelativeToolTip": "..\\DriverLayoutData\\clsDataAccessSetting.cs",
-              "ViewState": "AgIAAAYAAAAAZGZmZmYkwAsAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T14:44:18.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Login.cs",
-              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Login.cs",
-              "RelativeDocumentMoniker": "PDVLD\\Login.cs",
-              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Login.cs",
-              "RelativeToolTip": "PDVLD\\Login.cs",
-              "ViewState": "AgIAACkAAACAZmZmZmYlwDAAAABEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T14:43:36.807Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Login.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Login.cs",
-              "RelativeDocumentMoniker": "PDVLD\\Login.cs",
-              "ToolTip": "C:\\Users\\ouadd\\Desktop\\ABDOU\\DVLD_Project\\Driving-Vehicle-License\\PDVLD\\PDVLD\\Login.cs [Design]",
-              "RelativeToolTip": "PDVLD\\Login.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-27T10:03:30.511Z",
-              "EditorCaption": " [Design]"
             }
           ]
         }
