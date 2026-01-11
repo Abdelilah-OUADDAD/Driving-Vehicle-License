@@ -39,13 +39,11 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lblRecords = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.pbImageGeneral = new System.Windows.Forms.PictureBox();
             this.ctrlDrivingLicenseApplicationInfo1 = new PDVLD.Applications.DrivingLicensesServices.Control.ctrlDrivingLicenseApplicationInfo();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageGeneral)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,6 +114,8 @@
             // 
             this.btnClose.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Image = ((System.Drawing.Image)(resources.GetObject("btnClose.Image")));
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.Location = new System.Drawing.Point(758, 992);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(145, 46);
@@ -142,16 +142,6 @@
             this.lblRecords.Size = new System.Drawing.Size(18, 20);
             this.lblRecords.TabIndex = 9;
             this.lblRecords.Text = "0";
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(764, 998);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 33);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
             // 
             // button2
             // 
@@ -193,7 +183,6 @@
             this.ClientSize = new System.Drawing.Size(958, 1050);
             this.Controls.Add(this.lblRecords);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dataGridView1);
@@ -207,7 +196,6 @@
             this.Load += new System.EventHandler(this.FormVisionTestAppointment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbImageGeneral)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -223,7 +211,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblRecords;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;

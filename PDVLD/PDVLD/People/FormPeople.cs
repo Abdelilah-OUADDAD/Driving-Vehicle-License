@@ -184,8 +184,8 @@ namespace PDVLD.People
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int personID = (int)dataGridView1.CurrentRow.Cells[0].Value;
-            if (clsPeople.DeletePeople(personID) && MessageBox.Show($"Are you sure to delete PersonID {personID}", "Allowed",
-                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if ( MessageBox.Show($"Are you sure to delete PersonID {personID}", "Allowed",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes && clsPeople.DeletePeople(personID))
 
                 MessageBox.Show($"Person ID {personID} Deleted Successfully !!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
             else

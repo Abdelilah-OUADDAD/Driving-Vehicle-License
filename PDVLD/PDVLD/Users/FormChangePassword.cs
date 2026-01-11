@@ -42,7 +42,7 @@ namespace PDVLD.Users
         {
             if (this.ValidateChildren())
             {
-                users = new clsUsers(userID, PersonID, userName, ComputeHash(txtNewPassword.Text), isActive);
+                users = new clsUsers(userID, PersonID, userName, txtNewPassword.Text, isActive);
                 if (users != null)
                 {
                     if (users.Save())

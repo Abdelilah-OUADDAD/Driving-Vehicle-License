@@ -172,7 +172,9 @@ namespace PDVLD.Users
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (clsUsers.DeleteUser((int)dataGridView1.CurrentRow.Cells[0].Value))
+            if (MessageBox.Show($"Are you sure to delete PersonID {(int)dataGridView1.CurrentRow.Cells[0].Value}", "Allowed",
+                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes &&
+                clsUsers.DeleteUser((int)dataGridView1.CurrentRow.Cells[0].Value))
                 MessageBox.Show("User Deleted Successfully !!", "Deleted");
             else
                 MessageBox.Show("User Deleted Failed !!", "Deleted");

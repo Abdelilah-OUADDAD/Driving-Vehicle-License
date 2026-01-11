@@ -165,6 +165,11 @@ namespace PDVLD.Applications.DrivingLicensesServices.Control
 
                 }
             }
+            else
+            {
+                if (OnLicenseChange != null)
+                    OnLicenseChange(0, false);
+            }
         }
 
         void RenewSearch()
@@ -233,7 +238,7 @@ namespace PDVLD.Applications.DrivingLicensesServices.Control
                     if (OnDetainChange != null)
                         OnDetainChange(licenses.LicenseID.Value, false);
 
-                    MessageBox.Show("Selected License is already detained, Choose another One", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Selected License is already detained Or is not Active, Choose another One", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

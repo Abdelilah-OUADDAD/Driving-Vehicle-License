@@ -249,7 +249,7 @@ namespace DriverLayoutData
                                   ,Password = @Password
                                   ,IsActive = @IsActive
                              WHERE UserID = @UserID";
-
+            
             using (SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["ConnectionString"]))
             {
                 using (SqlCommand command = new SqlCommand(query, connection))
@@ -273,7 +273,7 @@ namespace DriverLayoutData
                     }
                     catch (Exception ex)
                     {
-                        clsDataAccessSetting.SetEventLog(ex.Message, EventLogEntryType.Error);
+                       // clsDataAccessSetting.SetEventLog(ex.Message, EventLogEntryType.Error);
                     }
                 }
             }

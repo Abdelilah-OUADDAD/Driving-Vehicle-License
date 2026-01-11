@@ -9,7 +9,8 @@ namespace DriverLayoutData
 {
     public class clsDataAccessSetting
     {
-        public static string ConnectionString = @"server =.; database = DVLD; User ID= sa ; Password = sa123456;";
+        public static string ConnectionString = @"Server=.;Database=DVLD;Integrated Security=SSPI;
+";
 
 
         public static void SetEventLog(string MessageText, EventLogEntryType type)

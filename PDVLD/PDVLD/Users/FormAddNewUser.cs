@@ -125,7 +125,7 @@ namespace PDVLD.Users
                     clsUsers users = new clsUsers();
                     users.PersonID = PersonID;
                     users.UserName = txtUserName.Text;
-                    users.Password = ComputeHash(txtPassword.Text);
+                    users.Password = txtPassword.Text;
                     if (checkActive.Checked)
                         users.IsActive = true;
                     else

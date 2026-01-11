@@ -179,11 +179,11 @@ namespace PDVLD.Applications.DrivingLicensesServices
 
         private void deleteApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (clsLocalDrivingLicenseApplications.DeleteLocalDrivingLicenseApplication((int)dataGridView1.CurrentRow.Cells[0].Value))
-            {
-                if (MessageBox.Show("Are you sure do you want delete Local Driving Application", "Allow", MessageBoxButtons.YesNoCancel
+            if (MessageBox.Show("Are you sure do you want delete Local Driving Application", "Allow", MessageBoxButtons.YesNoCancel
                     , MessageBoxIcon.Warning) == DialogResult.Yes)
-                {
+            {
+                if (clsLocalDrivingLicenseApplications.DeleteLocalDrivingLicenseApplication((int)dataGridView1.CurrentRow.Cells[0].Value))
+                {                
                     MessageBox.Show("Deleted Successfully !!", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else

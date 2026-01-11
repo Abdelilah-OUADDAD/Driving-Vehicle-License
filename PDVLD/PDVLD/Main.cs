@@ -140,7 +140,7 @@ namespace PDVLD
 
         private void releaseDetainedDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormDetainLicenses frm = new FormDetainLicenses();
+            FormRealeseDetainedLicense frm = new FormRealeseDetainedLicense();
             frm.ShowDialog();
         }
     }
